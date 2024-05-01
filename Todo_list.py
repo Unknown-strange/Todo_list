@@ -7,7 +7,7 @@ def main():
     print(todo_list)
     list_editor(todo_list)
     
-
+# the function is for editing the list 
 def list_editor(todo_list):
     while True:
         edit = input("what do you want to do with the list: ").lower()
@@ -37,13 +37,17 @@ def list_editor(todo_list):
     print(" ")
     
     next_effect = input("Do you want to prioritize you list?  ").lower()
+    
     if next_effect == "yes":
         task_prioritisation(todo_list)
+        
     elif next_effect == "no":
+        
+        # for printing out the list one line at a time 
         for list in todo_list:
             print(list) 
         
-        
+# for prioritizing the list   
 def task_prioritisation(todo_list):
       task = {
           "1" : "very low urgent",
@@ -52,9 +56,11 @@ def task_prioritisation(todo_list):
           "4" : "very urgency",
           "5" : "extreamly urgent"
     }
-      new_list = []
       print("")
+      
+      new_list = []
       print("From a range of 1 to 5 how urgent are the items")
+      
       for item in todo_list:
           task_input = input(f'how urgent is the task "{item}": ')
           if task_input in task:
@@ -63,6 +69,8 @@ def task_prioritisation(todo_list):
             
           else:
               print("Invalid urgency number. Range between 1 to 5")
+              
+      # for printing out the list one line at a time 
       for item in new_list:
         print(item)
       
