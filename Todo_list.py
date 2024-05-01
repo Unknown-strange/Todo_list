@@ -1,6 +1,5 @@
-def creat_list():
-    print("Creat your list")
-    user_input= input("Enter your list:  ")
+def main():
+    user_input= input("Creat your list: ")
     
     item_splits= user_input.split(",")
     todo_list = [item for item in item_splits]
@@ -70,5 +69,5 @@ def task_prioritisation(todo_list):
           
     
 if __name__ == "__main__":
-   creat_list()
+   main()
         
